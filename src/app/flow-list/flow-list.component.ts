@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { flowList } from '../flow-list';
+import { flowList } from '../constants';
 
 @Component({
   selector: 'app-flow-list',

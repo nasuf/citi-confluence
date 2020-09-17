@@ -9,24 +9,39 @@
     </div>
 </nz-result>
 <nz-list nzItemLayout="vertical" style="margin-left: 5%; margin-right: 5%;">
-    <nz-list-item *ngFor="let item of data">
-      <nz-list-item-meta>
-        <nz-list-item-meta-avatar [nzSrc]="item.avatar"> </nz-list-item-meta-avatar>
-        <nz-list-item-meta-title>
-          <a href="{{ item.href }}">{{ item.title }}</a>
-        </nz-list-item-meta-title>
-        <nz-list-item-meta-description>
-          {{ item.description }}
-        </nz-list-item-meta-description>
-      </nz-list-item-meta>
-      {{ item.content }}
-      <ul nz-list-item-actions>
-        <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
-        <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
-        <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 2</nz-list-item-action>
-      </ul>
-      <nz-list-item-extra>
-        <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
-      </nz-list-item-extra>
+    <nz-list-item *ngFor="let item of techList">
+        <nz-list-item-meta>
+            <nz-list-item-meta-avatar [nzSrc]="item.avatar"> </nz-list-item-meta-avatar>
+            <nz-list-item-meta-title>
+                <a>{{ item.title }}</a>
+            </nz-list-item-meta-title>
+            <nz-list-item-meta-description>
+                {{ item.description }}
+            </nz-list-item-meta-description>
+        </nz-list-item-meta>
+        {{ item.content }}
+        <ul nz-list-item-actions>
+            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
+            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
+            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 2</nz-list-item-action>
+            <nz-list-item-action><i nz-icon nzType="plus-circle" nzTheme="outline"
+                    (click)="showNewQuestionModal(item)"></i></nz-list-item-action>
+            <nz-list-item-action><i nz-icon nzType="comment" nzTheme="outline" (click)="showNewAnswerModal(item)"></i>
+            </nz-list-item-action>
+        </ul>
+        <nz-list-item-extra>
+            <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
+        </nz-list-item-extra>
     </nz-list-item>
-  </nz-list>
+</nz-list>
+
+<nz-modal [nzStyle]="{ top: '20px' }" [(nzVisible)]="isNewQuestionModalVisible" [nzTitle]="item && item.title"
+    (nzOnCancel)="handleNewQuestionCancel()" (nzOnOk)="handleNewQuestionCancel()" nzOkText='Post Your Question'>
+    <textarea nz-input placeholder="Input Your Question" [nzAutosize]="{ minRows: 2, maxRows: 6 }"></textarea>
+</nz-modal>
+
+<nz-modal [nzStyle]="{ top: '20px' }" [(nzVisible)]="isNewAnswerModalVisible" [nzTitle]="item && item.title"
+    (nzOnCancel)="handleNewAnswerOk()" (nzOnOk)="handleNewAnswerCancel()" nzOkText='Post Your Answer'>
+    <textarea nz-input placeholder="Input Your Answer"
+        [nzAutosize]="{ minRows: 2, maxRows: 6 }"></textarea>
+</nz-modal>
