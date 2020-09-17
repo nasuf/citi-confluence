@@ -15,12 +15,12 @@ export class EatsharingComponent implements OnInit {
         picSrc: `../../assets/eating_${mm}.png`,
         starNum: `${nn}`,
         href: 'http://localhost:4200',
-        title: `ant design part`,
+        title: `We're together`,
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-        description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+        description: 'Do you want ot join us to go out, there is one restuartant very nice!',
         content:
-          'We supply a series of design principles, practical patterns and high quality design resources ' +
-          '(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.'
+          'We got one nice restuartant, do you want to joi us, it is very yummy, ' +
+          'Welcome to join us.'
       };
     });
   }
