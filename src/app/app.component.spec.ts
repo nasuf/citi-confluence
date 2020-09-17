@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'citi-confluence'`, () => {
+  it(`should have as title 'springboard'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('citi-confluence');
+    expect(app.title).toEqual('springboard');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('citi-confluence app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('springboard app is running!');
   });
 });
