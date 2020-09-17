@@ -382,6 +382,14 @@ svg#clouds {
   font-weight: 900;
   font-size: larger;
 }
+.logo-right {
+  width: 300px;
+  height: 31px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  margin: -50px 24px 16px 16px;
+  color: white;
+  float: right;
+}
 
 [nz-menu] {
   line-height: 64px;

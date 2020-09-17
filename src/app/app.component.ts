@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isCollapsed = false;
   displayCom = 'home';
+  globalSearchValue = '';
   carSharingClick(e) {
     console.log("car sharing clicked");
     this.displayCom = 'carSharing';
@@ -33,5 +34,12 @@ export class AppComponent {
   }
   homeClick(e) {
     this.displayCom = 'home';
+  }
+
+  mouseUpEvent(e) {
+    console.log("input value: " + this.globalSearchValue);
+  }
+  keyUpEvent(e) {
+    console.log(">>>>>>>>>>>>>>" + this.globalSearchValue);
   }
 }

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CarsharingComponent } from './carsharing/carsharing.component';
+import { EatsharingComponent } from './eatsharing/eatsharing.component';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -38,7 +39,8 @@ registerLocaleData(en);
     HomepageComponent,
     CarsharingComponent,
     FlowListComponent,
-    TechQaComponent
+    TechQaComponent,
+    EatsharingComponent
   ],
   imports: [
     BrowserModule,

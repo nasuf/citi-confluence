@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-carsharing',
-  templateUrl: './carsharing.component.html',
-  styleUrls: ['./carsharing.component.css']
+  selector: 'app-eatsharing',
+  templateUrl: './eatsharing.component.html',
+  styleUrls: ['./eatsharing.component.css']
 })
-export class CarsharingComponent implements OnInit {
+export class EatsharingComponent implements OnInit {
   data: ItemData[] = [];
-  constructor() {
+  constructor() { 
     this.data = new Array(5).fill({}).map((_, index) => {
       var nn = Number((Math.random() * 1000).toFixed(0));
-      var cc = Number((Math.random() * 5).toFixed(0));
+      var mm = Number((Math.random() * 5).toFixed(0));
       return {
-        picSrc: `../../assets/car_${cc}.png`,
+        picSrc: `../../assets/eating_${mm}.png`,
         starNum: `${nn}`,
         href: 'http://localhost:4200',
         title: `ant design part ${index} (page: ${index} )`,
