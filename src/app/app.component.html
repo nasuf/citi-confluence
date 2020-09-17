@@ -1,6 +1,6 @@
 <nz-layout>
   <nz-header>
-    <div class="logo" style="display: flex; align-items: center;">SpringBoard</div>
+    <div class="logo" style="display: flex; align-items: center; font-size:18pt">SpringBoard</div>
     <ul nz-menu nzTheme="dark" nzMode="horizontal">
       <li nz-submenu nzTitle="WORK" nzIcon="setting">
         <ul>
@@ -10,13 +10,16 @@
           <li nz-menu-item nzTitle="FLOW" (click)="flowClick($event)">
             FLOW
           </li>
+          <li nz-menu-item nzTitle="HOME" (click)="homeClick($event)">
+            HOME
+          </li>
         </ul>
       </li>
       <li nz-submenu nzTitle="LIFE" nzIcon="setting">
         <ul>
           <li nz-menu-group nzTitle="SHARING">
             <ul>
-              <li nz-menu-item (click)="carSharingClick($event)">CAR SHARING</li>
+              <li nz-menu-item (click)="carSharingClick($event)">CAR POOLING</li>
               <li nz-menu-item (click)="eatingSharingClick($event)">EATING SHARING</li>
             </ul>
           </li>
