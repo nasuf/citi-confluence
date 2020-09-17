@@ -13,7 +13,7 @@ export class AppComponent {
     this.displayCom = 'carSharing';
   }
   technologyClick(e) {
-    console.log("car sharing clicked");
+    console.log("technology clicked");
     this.displayCom = 'technology';
   }
   flowClick(e) {
@@ -30,5 +30,8 @@ export class AppComponent {
   fmClick(e) {
     console.log("Flea market clicked");
     this.displayCom = 'fm';
+  }
+  homeClick(e) {
+    this.displayCom = 'home';
   }
 }
