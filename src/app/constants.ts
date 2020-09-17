@@ -89,7 +89,7 @@ export const techList = [
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         title: 'Help! My Gradle repository is not working!!!!!',
         description: 'My Gradle repository is not working',
-        content: 'Hey I am new to gradle. After running gradle build in the root directory of my application. The dependency declared in build gradle does not get downloaded.'
+        content: 'Hey, I am new to gradle. After running gradle build in the root directory of my application. The dependency declared in build gradle does not get downloaded.'
     },
     {
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',

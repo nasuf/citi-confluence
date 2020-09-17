@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Questions:
+1. 数据如何存储？
+  A: 后台数据存储在非关系型数据库中，使用MongoDB。
+2. 数据如何收集？
+  A: 1）通过用户录入
+     2）通过爬虫获取
