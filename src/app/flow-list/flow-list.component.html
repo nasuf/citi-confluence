@@ -1,17 +1,23 @@
-<h2>Flow List</h2>
-<div *ngFor="let flow of flowList; index as flowId">
-  <div class="flow-item"> 
-      <div class="flow-title">{{flow.title}}</div>
-      <div class="flow-other-info">
-          <span class="flow-other-info-detail"></span>
-          <span class="flow-other-info-detail"></span>
-          <span class="flow-other-info-detail"></span>
-          <span class="flow-like"></span>
-      </div>
-      <div class="flow-content"></div>
-  </div>
-  <!-- <h3>{{flow.name}}</h3>
-  <h2>{{flow.author}}</h2>
-  <h2>{{flow.createTime}}</h2> -->
+<h1>Flow List</h1>
 
-</div>
+<nz-list nzItemLayout="vertical" style="margin-left: 5%; margin-right: 5%;">
+    <nz-list-item *ngFor="let flow of flowList; index as flowId">
+      <nz-list-item-meta>
+        <nz-list-item-meta-avatar [nzSrc]="flow.avatar"> </nz-list-item-meta-avatar>
+        <nz-list-item-meta-title (click)="showFlowDetailModal()">
+          <a class="flow-title">{{ flow.title }} </a>
+        </nz-list-item-meta-title>
+      </nz-list-item-meta>
+      <div>
+        <span><img class="flow-info-img" width="15" alt="calander" src="../../assets/calander.png"/>{{flow.createTime}}</span>
+        <span><img class="flow-info-img" width="15" alt="technical" src="../../assets/technical.png"/>{{flow.technical}}</span>
+        <span><img class="flow-info-img" width="15" alt="comment" src="../../assets/comment.png"/>{{flow.comments}}</span>
+        <span><img class="flow-info-img" width="15" alt="like" src="../../assets/like.png"/>{{flow.likes}}</span>
+      </div>
+      <nz-list-item-extra>
+        <img width="272" alt="logo" src={{flow.flowPhoto}} />
+      </nz-list-item-extra>
+      <div class="flow-content">{{ flow.content }}</div>
+    </nz-list-item>
+    <app-flow-detail [isVisible]="isVisible" (handleEvent)="onHandleEvent()"></app-flow-detail>
+  </nz-list>

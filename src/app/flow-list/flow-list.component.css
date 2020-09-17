@@ -3,3 +3,13 @@
     font-weight: 500;
 }
 
+.flow-info-img {
+    margin-right: 8px;
+    width: 15px;
+    margin-bottom: 2px;
+    margin-left: 45px;;
+}
+
+.flow-content {
+    margin-left: 45px;
+}

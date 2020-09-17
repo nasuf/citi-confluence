@@ -10,8 +10,18 @@ import { flowList } from '../flow-list';
 })
 export class FlowListComponent implements OnInit {
   flowList = flowList;
+  isVisible = false;
 
   constructor() { }
+
+  showFlowDetailModal() {
+    this.isVisible = true;
+    console.log('show madal function');
+  }
+
+  onHandleEvent() {
+    this.isVisible = false;
+  }
 
   ngOnInit() { }
 

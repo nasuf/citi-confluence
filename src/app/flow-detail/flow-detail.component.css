@@ -1,0 +1,14 @@
+nz-steps {
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: rgb(232, 232, 232) 0px -1px 0px 0 inset;
+}
+
+.ant-list-item {
+    padding: 0;
+}
+
+.ant-list-vertical .ant-list-item-meta {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}

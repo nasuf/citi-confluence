@@ -1,0 +1,28 @@
+<nz-modal [(nzVisible)]="isVisible" nzWidth="600" nzTitle="Flow Details" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="Submit Question">
+  <nz-steps nzType="navigation" [nzCurrent]="index" (nzIndexChange)="onIndexChange($event)">
+    <nz-step nzTitle="Step 1" nzStatus="process"></nz-step>
+    <nz-step nzTitle="Step 2" nzStatus="process"></nz-step>
+    <nz-step nzTitle="Step 3" nzStatus="process"></nz-step>
+    <nz-step nzTitle="Step 4" nzStatus="process"></nz-step>
+    <nz-step nzTitle="Step 5" nzStatus="process"></nz-step>
+  </nz-steps>
+  <div class="steps-content" style="height: 250px; overflow-y: auto;">
+    <h3>{{ title }}</h3>
+    <p style="white-space: pre; font-size: 15px;">{{ content }}</p>
+    <br>
+
+    <nz-list nzItemLayout="vertical" style="margin-left: 5%; margin-right: 5%;">
+      <nz-list-item *ngFor="let item of questionList">
+        <nz-list-item-meta>
+          <nz-list-item-meta-avatar [nzSrc]="item.avatar"> </nz-list-item-meta-avatar>
+          <nz-list-item-meta-title style="width: 400px; display: inline-block;"><p style="white-space: pre; font-size: 15px; font-weight: 300;">{{ item.question }}</p></nz-list-item-meta-title>
+        </nz-list-item-meta>
+      </nz-list-item>
+    </nz-list>
+  </div>
+
+  
+
+
+  <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 3, maxRows: 5 }"></textarea>
+</nz-modal>
