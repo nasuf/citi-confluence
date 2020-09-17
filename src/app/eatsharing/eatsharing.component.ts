@@ -15,7 +15,7 @@ export class EatsharingComponent implements OnInit {
         picSrc: `../../assets/eating_${mm}.png`,
         starNum: `${nn}`,
         href: 'http://localhost:4200',
-        title: `ant design part ${index} (page: ${index} )`,
+        title: `ant design part`,
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
         content:

@@ -13,7 +13,7 @@
         <nz-list-item-meta>
             <nz-list-item-meta-avatar [nzSrc]="item.avatar"> </nz-list-item-meta-avatar>
             <nz-list-item-meta-title>
-                <a>{{ item.title }}</a>
+                <a (click)="showNewAnswerModal(item)">{{ item.title }}</a>
             </nz-list-item-meta-title>
             <nz-list-item-meta-description>
                 {{ item.description }}
@@ -22,8 +22,6 @@
         {{ item.content }}
         <ul nz-list-item-actions>
             <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
-            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
-            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 2</nz-list-item-action>
             <nz-list-item-action><i nz-icon nzType="plus-circle" nzTheme="outline"
                     (click)="showNewQuestionModal(item)"></i></nz-list-item-action>
             <nz-list-item-action><i nz-icon nzType="comment" nzTheme="outline" (click)="showNewAnswerModal(item)"></i>
@@ -42,6 +40,22 @@
 
 <nz-modal [nzStyle]="{ top: '20px' }" [(nzVisible)]="isNewAnswerModalVisible" [nzTitle]="item && item.title"
     (nzOnCancel)="handleNewAnswerOk()" (nzOnOk)="handleNewAnswerCancel()" nzOkText='Post Your Answer'>
+    <label>Q:</label>
+    <textarea nz-input style="text-align: left;"
+      [nzAutosize]="{ minRows:1, maxRows: 6 }">Tom:  I ran into same issue. Would some guru help on it???
+      </textarea>
+      <br>
+      <label>A:</label>
+    <textarea nz-input 
+        [nzAutosize]="{ minRows: 1, maxRows: 6 }">Lily:
+Hey, System caches the dependent jars so it won't be downloaded again and again. You may remove the dependency in your local and try again.
+$ rm -rf ~/.gradle/caches/
+    </textarea>
+    <br>
+    <textarea nz-input   *ngIf="newAnswer != ''"
+        [nzAutosize]="{ minRows: 1, maxRows: 6 }">Bob:
+{{newAnswer}}
+    </textarea>
     <textarea nz-input placeholder="Input Your Answer"
-        [nzAutosize]="{ minRows: 2, maxRows: 6 }"></textarea>
+        [nzAutosize]="{ minRows: 2, maxRows: 6 }">{{newAnswer}}</textarea>
 </nz-modal>

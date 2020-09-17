@@ -15,7 +15,7 @@ export class CarsharingComponent implements OnInit {
         picSrc: `../../assets/car_${cc}.png`,
         starNum: `${nn}`,
         href: 'http://localhost:4200',
-        title: `ant design part ${index} (page: ${index} )`,
+        title: `From Chen hui road to Century Avenue`,
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
         content:
