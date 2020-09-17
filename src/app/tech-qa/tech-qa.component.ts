@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { techList } from '../constants';
+import { NzModalRef } from 'ng-zorro-antd/modal/modal-ref';
 
 @Component({
   selector: 'app-tech-qa',
@@ -7,31 +9,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechQaComponent implements OnInit {
 
-  data: ItemData[] = [];
+  techList = techList;
+  item;
   constructor() { }
 
   ngOnInit(): void {
-    this.loadData(1);
   }
 
-  loadData(pi: number): void {
-    this.data = new Array(5).fill({}).map((_, index) => {
-      return {
-        href: 'http://localhost:4200',
-        title: `ant design part ${index} (page: ${pi})`,
-        avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-        description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-        content:
-          'We supply a series of design principles, practical patterns and high quality design resources ' +
-          '(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.'
-      };
-    });
+  isNewQuestionModalVisible = false;
+  isNewAnswerModalVisible = false;
+
+  showNewQuestionModal(item): void {
+    this.isNewQuestionModalVisible = true;
+    this.item = item;
+  }
+
+  showNewAnswerModal(item): void {
+    this.isNewAnswerModalVisible = true;
+    this.item = item;
+  }
+
+  handleNewQuestionOK(): void {
+    console.log('点击了确定');
+    this.isNewQuestionModalVisible = false;
+  }
+
+  handleNewAnswerOk(): void {
+    console.log('点击了确定');
+    this.isNewAnswerModalVisible = false;
+  }
+
+  handleNewQuestionCancel(): void {
+    this.isNewQuestionModalVisible = false;
+  }
+
+  handleNewAnswerCancel(): void {
+    this.isNewAnswerModalVisible = false;
   }
 
 }
 
 interface ItemData {
-  href: string;
   title: string;
   avatar: string;
   description: string;

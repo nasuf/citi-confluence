@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { questionList } from '../constants'
 
 @Component({
   selector: 'app-flow-detail',
@@ -11,28 +12,7 @@ export class FlowDetailComponent {
   index = 0;
   title = "Raise CMP to create new BD FID for CyberArk use."
   content = "You will receive a CISAR note after CMP completed. Kindly store the CISAR as it will be used in CyberArk FID info form.'";
-  questionList = [
-    {
-      avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-      question: 'I stuck on the step 3. The installation failed.'
-    },
-    {
-      avatar: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600333142677&di=289d209cc83b3088a8dac61355e9ad7d&imgtype=0&src=http%3A%2F%2Fpic2.zhimg.com%2F50%2Fv2-dabd289dd21a5cf4967cb9b710cee36f_hd.jpg',
-      question: 'Could you please provide error messages or exceptions related for reference?'
-    },
-    {
-      avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-      question: 'While installing rehat-lsb package in my server, I got below error. Please suggest on this.'
-       + '\nyum --enablerepo=soe6lsbprojects install redhat-lsb'
-       + '\n--> Finished Dependency Resolution'
-       + '\nError: Package: glibc-headers-2.17-222.el7.x86_64(2019Q1)'
-       + '\nRequires: glibc=2.17-222.el7'
-    },
-    {
-      avatar: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600333142677&di=289d209cc83b3088a8dac61355e9ad7d&imgtype=0&src=http%3A%2F%2Fpic2.zhimg.com%2F50%2Fv2-dabd289dd21a5cf4967cb9b710cee36f_hd.jpg',
-      question: 'Oh, the redhat-lsb package. If you are installing CyberArk agent to REHL 7 server, you could skip that package. Directly install Chef package.'
-    }
-]
+  questionList = questionList;
 
   constructor() {}
 

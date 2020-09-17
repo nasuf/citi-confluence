@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isCollapsed = false;
   displayCom = 'home';
+  globalSearchValue = '';
   carSharingClick(e) {
     console.log("car sharing clicked");
     this.displayCom = 'carSharing';
   }
   technologyClick(e) {
-    console.log("car sharing clicked");
+    console.log("technology clicked");
     this.displayCom = 'technology';
   }
   flowClick(e) {
@@ -30,5 +31,15 @@ export class AppComponent {
   fmClick(e) {
     console.log("Flea market clicked");
     this.displayCom = 'fm';
+  }
+  homeClick(e) {
+    this.displayCom = 'home';
+  }
+
+  mouseUpEvent(e) {
+    console.log("input value: " + this.globalSearchValue);
+  }
+  keyUpEvent(e) {
+    console.log(">>>>>>>>>>>>>>" + this.globalSearchValue);
   }
 }

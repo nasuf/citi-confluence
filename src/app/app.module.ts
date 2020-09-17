@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CarsharingComponent } from './carsharing/carsharing.component';
+import { EatsharingComponent } from './eatsharing/eatsharing.component';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,6 +31,7 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
+import { NzFormModule } from 'ng-zorro-antd/form';
 
 registerLocaleData(en);
 
@@ -39,7 +42,8 @@ registerLocaleData(en);
     CarsharingComponent,
     FlowListComponent,
     TechQaComponent,
-    FlowDetailComponent
+    FlowDetailComponent,
+    EatsharingComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,10 @@ registerLocaleData(en);
     NzAvatarModule,
     NzPageHeaderModule,
     NzModalModule,
-    NzStepsModule
+    NzStepsModule,
+    NzFormModule,
+    NzCarouselModule,
+    NzPageHeaderModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
