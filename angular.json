@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "citi-confluence"
+  "defaultProject": "citi-confluence",
+  "cli": {
+    "analytics": "f7e0e8ec-5446-4310-9cab-d7a18f432047"
+  }
 }

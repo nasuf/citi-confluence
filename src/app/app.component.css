@@ -110,7 +110,7 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 30px;
   display: flex;
   align-items: center;
   background: -webkit-linear-gradient(top,#00bdf2,#00b3f0 18%,#0066b3 77%,#004985);
