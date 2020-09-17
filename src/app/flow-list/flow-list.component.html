@@ -1,7 +1,11 @@
-<h2>Flow List</h2>
-<div *ngFor="let flow of flowList; index as flowId">
-  <h3>{{flow.name}}</h3>
-  <h2>{{flow.author}}</h2>
-  <h2>{{flow.createTime}}</h2>
-
-</div>
+  <nz-card nzTitle="Card Title">
+    <p style="font-size:14px;color:rgba(0, 0, 0, 0.85);margin-bottom:16px;font-weight: 500;">
+      Flow Name
+    </p>
+    <nz-card *ngFor="let flow of flowList; index as flowId" nzType="inner" [nzTitle]="flow.name" [nzExtra]="extraTemplate">
+      <a>{{ flow.author + '/' +  flow.createTime}}</a>
+    </nz-card>
+  </nz-card>
+  <ng-template #extraTemplate>
+    <a>More</a>
+  </ng-template>

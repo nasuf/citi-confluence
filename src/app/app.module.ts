@@ -18,6 +18,13 @@ import en from '@angular/common/locales/en';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { FlowListComponent } from './flow-list/flow-list.component';
+import { TechQaComponent } from './tech-qa/tech-qa.component';
+import { NzResultModule } from 'ng-zorro-antd/result';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 
 registerLocaleData(en);
 
@@ -26,7 +33,8 @@ registerLocaleData(en);
     AppComponent,
     HomepageComponent,
     CarsharingComponent,
-    FlowListComponent
+    FlowListComponent,
+    TechQaComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,13 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzInputModule,
-    NzBreadCrumbModule
+    NzBreadCrumbModule,
+    NzResultModule,
+    NzIconModule,
+    NzButtonModule,
+    NzListModule,
+    NzCardModule,
+    NzAvatarModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
