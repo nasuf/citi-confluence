@@ -1,7 +1,17 @@
 <h2>Flow List</h2>
 <div *ngFor="let flow of flowList; index as flowId">
-  <h3>{{flow.name}}</h3>
+  <div class="flow-item"> 
+      <div class="flow-title">{{flow.title}}</div>
+      <div class="flow-other-info">
+          <span class="flow-other-info-detail"></span>
+          <span class="flow-other-info-detail"></span>
+          <span class="flow-other-info-detail"></span>
+          <span class="flow-like"></span>
+      </div>
+      <div class="flow-content"></div>
+  </div>
+  <!-- <h3>{{flow.name}}</h3>
   <h2>{{flow.author}}</h2>
-  <h2>{{flow.createTime}}</h2>
+  <h2>{{flow.createTime}}</h2> -->
 
 </div>
