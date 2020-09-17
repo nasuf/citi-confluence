@@ -17,6 +17,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { FlowListComponent } from './flow-list/flow-list.component';
 
 registerLocaleData(en);
 
@@ -24,7 +25,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     HomepageComponent,
-    CarsharingComponent
+    CarsharingComponent,
+    FlowListComponent
   ],
   imports: [
     BrowserModule,
