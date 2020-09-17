@@ -26,6 +26,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 
 registerLocaleData(en);
 
@@ -54,7 +55,8 @@ registerLocaleData(en);
     NzListModule,
     NzCardModule,
     NzAvatarModule,
-    NzCarouselModule
+    NzCarouselModule,
+    NzPageHeaderModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
