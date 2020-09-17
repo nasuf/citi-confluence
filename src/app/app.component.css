@@ -375,9 +375,12 @@ svg#clouds {
 .logo {
   width: 120px;
   height: 31px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px 24px 16px 0;
+  /* background: rgba(255, 255, 255, 0.2); */
+  margin: 16px 24px 16px 24px;
+  color: white;
   float: left;
+  font-weight: 900;
+  font-size: larger;
 }
 
 [nz-menu] {
