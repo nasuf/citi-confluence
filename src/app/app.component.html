@@ -32,6 +32,7 @@
         </ul>
       </li>
     </ul>
+    <!--
     <div nz-result-extra class="logo-right" style="display: flex; align-items: center;">
       <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton" >
           <input type="text" nz-input placeholder="searching..."  [(ngModel)]="globalSearchValue" />
@@ -40,7 +41,7 @@
           <button nz-button nzType="primary" nzSearch (click)="mouseUpEvent($event)"><i nz-icon nzType="search"></i></button>
       </ng-template>
   </div>
-   
+   -->
   </nz-header>
   <nz-content>
     <div class="inner-content" [ngSwitch]="displayCom">
@@ -49,6 +50,8 @@
       <app-flow-list *ngSwitchCase="'flow'"></app-flow-list>
       <app-tech-qa *ngSwitchCase="'technology'"></app-tech-qa>
       <app-eatsharing *ngSwitchCase="'eatingSharing'"></app-eatsharing>
+      <app-labourunion *ngSwitchCase="'lup'"></app-labourunion>
+      <app-fleamarket *ngSwitchCase="'fm'"></app-fleamarket>
     </div>
   </nz-content>
   <nz-footer>APP Design ©2020 Implement By Code Shooter</nz-footer>

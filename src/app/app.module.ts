@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CarsharingComponent } from './carsharing/carsharing.component';
 import { EatsharingComponent } from './eatsharing/eatsharing.component';
+import { LabourunionComponent } from './labourunion/labourunion.component';
+import { FleamarketComponent } from './fleamarket/fleamarket.component';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -43,7 +45,9 @@ registerLocaleData(en);
     FlowListComponent,
     TechQaComponent,
     FlowDetailComponent,
-    EatsharingComponent
+    EatsharingComponent,
+    LabourunionComponent,
+    FleamarketComponent,
   ],
   imports: [
     BrowserModule,

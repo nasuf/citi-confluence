@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EatsharingComponent implements OnInit {
   data: ItemData[] = [];
+  isDetailsModalVisible = false;
+  selectedItem;
   constructor() { 
     this.data = new Array(5).fill({}).map((_, index) => {
       var nn = Number((Math.random() * 1000).toFixed(0));
@@ -26,6 +28,13 @@ export class EatsharingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  openDetails(item) {
+    this.selectedItem = item;
+    this.isDetailsModalVisible = true;
+  }
+  handleDetailsCancel() {
+    this.isDetailsModalVisible = false;
   }
 
 }
